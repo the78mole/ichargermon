@@ -44,7 +44,7 @@ LDFLAGS = `pkg-config --libs $(LIBHIDAPI)`
 all: $(BIN)
 
 $(BIN): $(SRCS)
-	g++ $(CFLAGS) $(LDFLAGS) $^ -o $@
+	g++ $(CFLAGS) $^ $(LDFLAGS) -o $@
 
 run_ichargermon: $(BIN)
 	./$(BIN)
